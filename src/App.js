@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoList from "./List"
+import { useState,useEffect } from 'react';
+import Form from './Form';
 
 function App() {
+  const initialState=JSON.parse(localStorage.getItem("todo"))||[];
+  const [input,setinput]=useState("")
+  const [todo,setodo]=useState(initialState)
+
+ 
+  useEffect(()=>{
+   localStorage.setItem("todo",JSON.stringify(todo));
+  },[todo]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container">
+       <div className="app-wrapper">
+          <div>
+   <h1>Todo List</h1>
+ 
+<div>
+  <Form input={input}
+  setinput={setinput}
+  todo={todo}
+  setodo={setodo}/>
+</div>
+
+<div>
+  <TodoList 
+  todo={todo}
+  setodo={setodo}/>
+</div>
+</div>
+
+</div>
     </div>
   );
 }
