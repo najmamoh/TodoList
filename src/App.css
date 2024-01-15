@@ -1,38 +1,99 @@
-.App {
+
+.Container{
+  position: relative;
+  background-color: blanchedalmond;
+  width: 30%;
+  margin: auto;
+/* text-align: center; */
+padding: 0px 0px 500px 0px;
+}
+.task-input{
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  width: 70%;
+  border: none;
+  box-shadow: 5px 5px 5px  #dcdbdb;
+;
+}
+form{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button-Add{
+font-size: 18px;
+margin-left: 20px;
+border-radius: 10px;
+padding: 10px;
+width: 60px;
+background-color: rgb(244, 164, 43);
+border: none;
+box-shadow: 5px 5px 5px   rgb(247, 208, 150);;
+font-weight: bolder;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+padding-top: 5%;
+text-align: center;
+}
+.green{
+  position: absolute;
+  font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    width: 88%;
+    border: none;
+    box-shadow: 5px 5px 5px  #dcdbdb;
+  margin-left: 17px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
+  color: green;
+}
+.list{
+  position: absolute;
+font-size: 18px;
+  padding: 12px;
+  border-radius: 10px;
+  width: 88%;
+  border: none;
+  box-shadow: 5px 5px 5px  #dcdbdb;
+margin-left: 10px;
+font-family: 'Courier New', Courier, monospace;
+margin-top: 10px;
+color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  li{
+list-style-type: none; 
+margin-top: 12px;
+}
+.checkbox {
+  position: relative;
+  margin-left: 130px;
+  margin-top: 19px;
+  width: 19px;
+}
+.btn{
+  position: relative;
+  margin-left: 0px;
+  margin-top: 19px;
+  border-radius: 10px;
+  padding: 5px;
+  width: 60px;
+  background-color: rgb(244, 164, 43);
+  border: none;
+  box-shadow: 2px 4px 4px   rgb(247, 208, 150);;
+  font-weight: bolder;
+
+}
+.allList{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left: 40%;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* @media only screen and (max-width: 700px) {
+  .Container{
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} */
